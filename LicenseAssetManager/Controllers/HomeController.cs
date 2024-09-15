@@ -6,26 +6,29 @@ namespace LicenseAssetManager.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IStoreRepository repo)
         {
-            _logger = logger;
+            repository = repo;
         }
+
+        private IStoreRepository repository;
 
         public IActionResult Index()
         {
-            return View();
+            // Note that the view is Views/Home/Index.cshtml
+            return View(repository.Products);
         }
 
         public IActionResult Privacy()
         {
+            // Note that the view is Views/Home/Privacy.cshtml
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            // Note that the view is Views/Shared/Error.cshtml
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
