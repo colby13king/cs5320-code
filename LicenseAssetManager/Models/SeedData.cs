@@ -21,14 +21,14 @@ namespace LicenseAssetManager.Models
                         Name = "BestCAD",
                         Description = "The worlds best CAD application",
                         Category = "Engineering Tools",
-                        Price = 5000
+                        Price = 1
                     },
                     new Product
                     {
                         Name = "BestCAD_XL",
                         Description = "The XL features for BestCAD",
                         Category = "Engineering Tools",
-                        Price = 100000
+                        Price = 14
                     }
                     );
                 context.SaveChanges();
