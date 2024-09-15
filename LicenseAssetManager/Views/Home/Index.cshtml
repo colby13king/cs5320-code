@@ -2,7 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model IQueryable<Product>
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to the License Asset Manager Store</h1>
+    <h2 class="display-8">Developed by Colby King and John Williams</h2>
+    <h2 class="display-8">CS 5320 - Team 2</h2>
+    <h2 class="display-8">Fall 2024</h2>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">Building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    @foreach (var p in Model ?? Enumerable.Empty<Product>()) {
+        <div>
+            <h3>@p.Name</h3>
+            @p.Description
+            <h4>@p.Price.ToString("c")</h4>
+        </div>
+    }
 </div>
