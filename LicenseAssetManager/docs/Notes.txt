@@ -1,0 +1,10 @@
+﻿To open an SQL table for viewing or editing
+   SQL Server Object Explorer
+      SQL Server
+         (localdb)
+            Databases
+               LicenseAssetManagerStoreDb
+                  Tables
+                     dbo.Products
+                        Right click
+                           View Data
