@@ -16,3 +16,5 @@ namespace LicenseAssetManager.Models
         public string Category { get; set; } = String.Empty;
     }
 }
+
+
