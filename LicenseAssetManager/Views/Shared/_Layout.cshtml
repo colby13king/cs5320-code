@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="~/LicenseAssetManager.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <div>
-        @RenderBody()
+    <div class="bg-dark text-white p-2">
+        <span class="navbar-brand m1-2">License Asset Management Store</span>
+    </div>
+
+    <div class="row m-1 p-1">
+        <div id="categories" class="col-3">
+            Useful Info Here
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>
