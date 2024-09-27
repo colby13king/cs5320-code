@@ -1,4 +1,5 @@
 using LicenseAssetManager.Models;
+using LicenseAssetManager.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,10 +14,23 @@ namespace LicenseAssetManager.Controllers
 
         private IStoreRepository repository;
 
-        public IActionResult Index()
+        public int PageSize = 1;
+
+        public IActionResult Index(int productPage = 1)
         {
             // Note that the view is Views/Home/Index.cshtml
-            return View(repository.Products);
+            return View(
+                new ProductsListViewModel
+                {
+                    Products = repository.Products.OrderBy(p => p.ProductID).Skip((productPage - 1) * PageSize).Take(PageSize),
+                    PagingInfo = new PagingInfo
+                    {
+                        CurrentPage = productPage,
+                        ItemsPerPage = PageSize,
+                        TotalItems = repository.Products.Count()
+                    }
+                }
+                );
         }
 
         public IActionResult Privacy()

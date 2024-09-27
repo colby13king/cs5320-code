@@ -52,6 +52,10 @@ app.UseHttpsRedirection();
 // enables support for serving static content from the wwwroot folder and will be created later
 app.UseStaticFiles();
 
+// 7.4.2
+// Create URLs that are more appealing by creating a scheme that follows the pattern of composable URLs (makes sense to the user)
+app.MapControllerRoute("pagination", "Products/Page{productPage}", new { controller = "Home", Action = "Index" });
+
 // 7.1.5
 // registers the MVC framework as a source of endpoints using a default convention for mapping requests to classes and methods
 app.MapDefaultControllerRoute();
