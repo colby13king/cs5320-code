@@ -27,6 +27,10 @@ namespace LicenseAssetManager.Infrastructure
 
         public string? PageAction { get; set; }
 
+        // 8.1.2 Listing 8.4
+        [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
+        public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>();
+
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; } = String.Empty;
         public string PageClassNormal {  get; set; } = String.Empty;
@@ -41,7 +45,9 @@ namespace LicenseAssetManager.Infrastructure
                 for (int i = 1; i <= PageModel.TotalPages; i++)
                 {
                     TagBuilder tag = new TagBuilder("a");
-                    tag.Attributes["href"] = urlHelper.Action(PageAction, new { productPage = i });
+                    // 8.1.2
+                    PageUrlValues["productPage"] = i;
+                    tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
 
                     if(PageClassesEnabled)
                     {
