@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LicenseAssetManagerSDK\LicenseAssetManagerSDK.csproj" />
     <ProjectReference Include="..\LicenseAssetManager\LicenseAssetManager.csproj" />
   </ItemGroup>
 
