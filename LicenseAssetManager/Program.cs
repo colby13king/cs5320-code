@@ -28,6 +28,15 @@ builder.Services.AddDbContext<StoreDbContext>(options =>
 
 builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
 
+// 8.2.1 Configure Razor Pages
+builder.Services.AddRazorPages();
+
+// 8.2.4 Enable Sessions
+// sets up the data in-memory data store
+builder.Services.AddDistributedMemoryCache();
+// registers the services used to access session data
+builder.Services.AddSession();
+
 // 7.1.5
 var app = builder.Build();
 
@@ -51,6 +60,10 @@ app.UseHttpsRedirection();
 // 7.1.5
 // enables support for serving static content from the wwwroot folder and will be created later
 app.UseStaticFiles();
+
+// 8.2.4 Enable Sessions
+// allows the session system to automatically associate request with sessions when they arrive from the client
+app.UseSession();
 
 // 8.1.2
 // Create URLs that are more appealing by creating a scheme that follows the pattern of composable URLs (makes sense to the user)
@@ -82,6 +95,10 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 */
+
+// 8.2.1 Configure Razor Pages
+// registers Razor Pages as endpoints that the URL routing system can use to handle request
+app.MapRazorPages();
 
 // 7.2.7
 SeedData.EnsurePopulated(app);
