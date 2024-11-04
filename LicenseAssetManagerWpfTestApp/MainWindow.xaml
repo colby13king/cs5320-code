@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LicenseAssetManagerWpfTestApp"
         mc:Ignorable="d"
-        Title="License Asset Manager Test App" Height="450" Width="800">
+        Title="License Asset Manager Test App" Height="450" Width="800" x:Name="window">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -26,7 +26,7 @@
         <Label Grid.Row="3" Grid.Column="0">Request String</Label>
         <Label Grid.Row="4" Grid.Column="0">Request Result</Label>
 
-        <TextBox x:Name="emailTB" Grid.Row="0" Grid.Column="1" Foreground="Red">jwilli11@uccs.edu</TextBox>
+        <TextBox x:Name="emailTB" Grid.Row="0" Grid.Column="1" Foreground="Red" Text="{Binding EmailAddress}"></TextBox>
         <ListBox x:Name="licenseNamesLB" Grid.Row="1" Grid.Column="1">
             <ListBoxItem>Best_CAD</ListBoxItem>
             <ListBoxItem>Unknown_License</ListBoxItem>
