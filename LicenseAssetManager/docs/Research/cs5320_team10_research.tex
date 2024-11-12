@@ -34,7 +34,7 @@
 
 \title{Software Architecture}
 
-\subtitle{Using Graphical and Textural Data in Software Architecture Documenation}
+\subtitle{When to use Alternative Formats for Communicating Ideas from Stakeholders to Software Developers}
 
 
 %
@@ -62,7 +62,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{1} %  in this sample file, there are a *total*
+\numberofauthors{2} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -87,14 +87,14 @@ Johnny King and John L Williams Jr\titlenote{King and Williams are graduate stud
     }
 
 
-\date{6 Oct 2024}
+\date{11 Nov 2024}
 % Just remember to make sure that the TOTAL number of authors
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
 
 \maketitle
 \begin{abstract}
-The software architecture documentation industry has a problem ... 
+Documenting software in a way that avoids verbosity, ambiguity, and confusion is a goal that all software architects should aspire to. The authors will identify and compare several formats that may be used to document software. The authors will list some of the pros and cons of each format, helping the readers to make an informed choice of the format to use for their own software projects.
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -107,29 +107,97 @@ The software architecture documentation industry has a problem ...
 \keywords{Software, Architecture, Documentation} % NOT required for Proceedings
 
 \section{Introduction}
-Software architects need to document ... \cite{Lamport:SoftwareEngineering}
+
+
+
+\section{Background}
+Software architects are responsible for communicating ideas from stakeholders to software coders with the goal that the software coders accurately and completely implement those ideas into a working software product.\newline
+With an estimated software project failure rate of over 40\%, we need to investigate possible reasons for such a high percentage of failures. One such reason may be a failure to communicate effectively. Communication is required between stakeholders and requirements engineers, between requirements engineers and software architects, and finally between software architects and software coders and testers \cite{Lamport:RequirementsEngineering}. The authors will focus their investigation on communication failures between software architects and software coders and testers. This approach will assume that documents created prior to this communication phase are both complete and correct.\newline
+Software architects have several formats to chose from when it comes to creating documentation for software. We will assume that most software projects are too complex to support an all oral format using natural language to communicate the ideas, so we will assume that at least a written format using natural language is required. Other formats that are more formal and structured in nature include UML diagrams and mathematical models.
 
 \section{Related Work}
-Software architects have ...
+Miles and Hamilton describe why and how to use UML (Universal Modeling Language) for documenting software. They list the following cases for using UML \cite{Lamport:UML}.
+\begin{enumerate}
+	\item Requirements using Use Case Diagrams
+	\item System Workflows using Activity Diagrams
+	\item A Systems Logical Structure using Class Diagrams
+	\item Ordered Interactions using Sequence Diagrams
+	\item Interaction Links using Communication Diagrams
+	\item Interaction Timing using Timing Diagrams
+	\item Interaction Picture using Interaction Overview Diagrams
+	\item Internal Class Structure using Composite Structures
+	\item System Parts using Component Diagrams
+	\item Organize Your Model using Packages
+	\item Object State using State Machine Diagrams
+	\item The Deployed System using Deployment Diagrams
+\end{enumerate}
+Wiegers and Beatty discuss the importance of using both textual and visual formats to capture the full intentions of the intended system. Their book describes the following visual requirements models \cite{Lamport:SoftwareRequirements}.
+\begin{enumerate}
+	\item Data flow diagrams (DFDs)
+	\item Process flow diagrams 
+	\item State-transition diagrams and state tables
+	\item Dialog maps
+	\item Decision tables and decision trees
+	\item Event-response tables
+	\item Feature trees (Ch 5)
+	\item Use case diagrams (Ch 8)
+	\item Activity diagrams (Ch 8)
+	\item Entity-relationship diagrams (Ch 13)
+\end{enumerate}
+Wiegers and Beatty also briefly discuss the use of visual models in agile driven projects \cite{Lamport:SoftwareRequirements}.
+
+The American Institute of Architects discuss the need for standard content and graphics to be used by Construction Architects to document their projects (Appendix E). \cite{Lamport:AIA_Graphical_Standards}. Although software architecture and construction architecture are technically different fields, they share many common goals of turning stakeholder ideas into a real products.
+
+Ingeno discusses methods for documenting and reviewing software architectures \cite{Lamport:SoftwareArchitectureHandbook} In particular, he discusses
+\begin{enumerate}
+	\item Uses of software architecture documentation
+	\item Creating architecture descriptions (ADs), including architecture views
+	\item Using UML to document software architecture
+	\item Reviewing software architecture documents
+\end{enumerate}
 
 \section{Proposed Approach}
-The software architecture industry needs to ...
+The authors will review some of the literature written by leading experts on the topic of software requirements documentation content and format. A table will be generated listing the different formats proposed and the pros and cons of each format.
 
-\section{Implementation}
-I will research ways to ...
+\section{Experimental Results}
 
-\section{Evaluation}
-I will research ways to ...
+\section{Discussion}
+
+\section{Threats to Validity}
 
 \section{Conclusions and Future Work}
-In the future, most software architects will ...
-\newline
-Research will involve developing new procedures to 
-\newline
-1) document software ... 
+Our conclusion is ...
 
 \section{Acknowledgments}
-I would like to thank Dr. Kristen Walcott, Dr. Armin Moin and the Software Engineering Department at UCCS for helping me gain a deeper understanding of the challenges and opportunities in software architecture.
+We would like to thank Dr. Kristen Walcott, Dr. Armin Moin and the Software Engineering Department at UCCS for helping us gain a deeper understanding of the challenges and opportunities in software architecture.
+
+\section{Notes and Brainstorming - Delete before submitting final paper}
+\begin{enumerate}
+	\item Understanding Research Problems
+	\begin{enumerate}
+		\item Topic: We are evaluating the usefulness of presenting ideas in different formats 
+		\item Question: because we want to find out if certain formats are more useful than others in communicating ideas from stakeholders to software developers
+		\item Significance: so that we can help others choose a document format that will result in successful communication of ideas from stakeholders to software developers. 
+	\end{enumerate}
+	\item Levels of Idea Formats from Abstract to Concrete
+	\begin{enumerate}
+		\item Mental
+		\item Natural Language
+		\begin{enumerate}
+			\item Oral
+			\item Written
+		\end{enumerate}
+			
+		\item Formal Languages
+		\begin{enumerate}
+			\item Mathematical
+			\item Models (UML)
+		\end{enumerate}
+		\item Source Code
+	\end{enumerate}
+\end{enumerate}
+
+ 
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to

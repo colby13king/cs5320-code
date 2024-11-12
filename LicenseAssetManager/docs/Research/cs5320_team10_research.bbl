@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lamport:SoftwareArchitectureHandbook}
+J.~Ingeno.
+\newblock {\em Software Architect's Handbook}.
+\newblock Packt Publishing, 2018.
+
+\bibitem{Lamport:UML}
+R.~Miles and K.~Hamilton.
+\newblock {\em Learning UML 2.0}.
+\newblock O'Reilly, 2006.
+
+\bibitem{Lamport:AIA_Graphical_Standards}
+A.~I. of~Architects.
+\newblock {\em Architectural Graphic Standards, 11th Edition}.
+\newblock John Wiley and Sons, Inc., 2007.
+
+\bibitem{Lamport:RequirementsEngineering}
+A.~van Lamsweerde.
+\newblock {\em Requirements Engineering}.
+\newblock Wiley, 2010.
+
+\bibitem{Lamport:SoftwareRequirements}
+K.~Wiegers and J.~Beatty.
+\newblock {\em Software Requirements}.
+\newblock Microsoft Press, 2013.
+
+\end{thebibliography}
