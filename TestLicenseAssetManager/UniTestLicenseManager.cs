@@ -12,7 +12,7 @@ namespace TestLicenseAssetManager
     {
         [Fact]
 
-        public void TestGetLicense()
+        public async void TestGetLicense()
         {
             LicenseManager licenseManager = new LicenseManager();
 
@@ -22,7 +22,7 @@ namespace TestLicenseAssetManager
             string email = "jwilli11@uccs.edu";
             int PID = 1;
             string licenseName = "Best_CAD";
-            License license = licenseManager.GetLicense(url, email, PID, licenseName);
+            License license = await licenseManager.GetLicense(url, email, PID, licenseName);
             Assert.NotNull(license);
             Assert.True(license.Approved);
 
