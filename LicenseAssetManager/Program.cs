@@ -28,6 +28,9 @@ builder.Services.AddDbContext<StoreDbContext>(options =>
 
 builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
 
+// 9.3.4
+builder.Services.AddScoped<IOrderRepository, EFOrderRepository>();
+
 // 8.2.1 Configure Razor Pages
 builder.Services.AddRazorPages();
 
