@@ -37,6 +37,10 @@ builder.Services.AddDistributedMemoryCache();
 // registers the services used to access session data
 builder.Services.AddSession();
 
+// 9.1.2 Register the service
+builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 // 7.1.5
 var app = builder.Build();
 
