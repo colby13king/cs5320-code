@@ -38,9 +38,9 @@ namespace LicenseAssetManager.Pages
             return RedirectToPage(new { returnUrl = returnUrl });
         }
 
-        public IActionResult OnPostRemove(long productId, string returnUrl) 
+        public IActionResult OnPostRemove(long ProductID, string returnUrl) 
         {
-            //Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.ProductID == productId).Product);
+            Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.ProductID == ProductID).Product);
             return RedirectToPage(new { returnUrl = returnUrl });
             
            
