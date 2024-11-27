@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "LAMS My Orders";
+}
+
+@model LicenseAssetManager.ViewModels.OrdersListViewModel
+
+<div>
+    @foreach (var order in Model.Orders ?? Enumerable.Empty<Order>())
+    {
+        <h4>OrderID = @order.OrderID</h4> <br/>
+        @foreach (var item in order.Lines)
+        {
+           <h4>CartLineID @item.CartLineID</h4>
+        }
+    }
+</div>

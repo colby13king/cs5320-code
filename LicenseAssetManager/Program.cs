@@ -119,8 +119,7 @@ app.MapRazorPages();
 app.MapBlazorHub();
 app.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
 
-app.MapRazorComponents<AdminBlazor>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<AdminBlazor>().AddInteractiveServerRenderMode();
 
 app.UseAntiforgery();
 

@@ -13,5 +13,8 @@ namespace LicenseAssetManager.Models
 
         [Required(ErrorMessage = "Please enter a name")]
         public string? Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter a password")]
+        public string? PassWord { get; set; }
     }
 }

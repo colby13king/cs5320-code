@@ -11,5 +11,9 @@ namespace LicenseAssetManager.Models
         private StoreDbContext context;
 
         public IQueryable<Product> Products => context.Products;
+
+        public IQueryable<Order> Orders => context.Orders;
+
+        public IQueryable<CartLine> CartLines => context.CartLines;
     }
 }
