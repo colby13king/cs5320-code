@@ -1,0 +1,9 @@
+﻿<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(AdminLayout)" />
+        <FocusOnNavigate RouteData="routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <h4 class="bg-danger text-white text-center p-2">No Matching Route Found</h4>
+    </NotFound>
+</Router>

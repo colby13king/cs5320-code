@@ -1,5 +1,6 @@
 using LicenseAssetManager.Data;
 using LicenseAssetManager.Models;
+using LicenseAssetManager.Pages.Admin;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,6 +44,13 @@ builder.Services.AddSession();
 // 9.1.2 Register the service
 builder.Services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+// 10.1 Prep Blazor Server
+builder.Services.AddServerSideBlazor();
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
 // 7.1.5
 var app = builder.Build();
@@ -106,6 +114,15 @@ app.MapRazorPages();
 // 8.2.1 Configure Razor Pages
 // registers Razor Pages as endpoints that the URL routing system can use to handle request
 app.MapRazorPages();
+
+// 10.1 Prep Blazor Server
+app.MapBlazorHub();
+app.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
+
+app.MapRazorComponents<AdminBlazor>()
+    .AddInteractiveServerRenderMode();
+
+app.UseAntiforgery();
 
 // 7.2.7
 SeedData.EnsurePopulated(app);

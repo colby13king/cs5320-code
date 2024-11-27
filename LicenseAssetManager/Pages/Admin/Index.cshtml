@@ -1,0 +1,37 @@
+﻿@page "/admin"
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>License Asset Manager Store Admin</title>
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="connectionErrors.css" />
+    </head>
+    <body>
+        <div id="components-reconnect-modal"
+             class="h4 bg-dark text-white text-center my-2 p-2
+                components-reconnect-hide">
+            Blazor Connection Lost
+            <div class="reconnect">
+                Trying to reconnect...
+            </div>
+            <div class="failed">
+                Reconnection Failed.
+                <button class="btn btn-light btn-sm m-1"
+                        onclick="window.Blazor.reconnect()">
+                    Reconnect
+                </button>
+            </div>
+            <div class="rejected">
+                Reconnection Rejected.
+                <button class="btn btn-light btn-sm m-1"
+                        onclick="location.reload()">
+                    Reload
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
