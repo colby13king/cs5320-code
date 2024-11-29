@@ -1,5 +1,6 @@
 ﻿using LicenseAssetManagerSDK.Controllers;
 using LicenseAssetManagerSDK.Models;
+using System;
 using System.ComponentModel;
 using System.IO;
 using System.Net;
@@ -29,7 +30,7 @@ namespace LicenseAssetManagerWpfTestApp
 
             licenseNamesLB.SelectedIndex = 0;
 
-            emailAddress = "jwilli11@uccs.edu";
+            userName = "jwilli11";
 
             this.DataContext = this;
         }
@@ -52,7 +53,7 @@ namespace LicenseAssetManagerWpfTestApp
 
 
         // 
-        private string emailAddress;
+        private string userName;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -60,12 +61,29 @@ namespace LicenseAssetManagerWpfTestApp
         /// 
         /// </remarks>
 
-        public string EmailAddress
+        public string UserName
         {
-            get => emailAddress;
+            get => userName;
             set { 
-                emailAddress = value;
-                OnPropertyChanged("EmailAddress");
+                userName = value;
+                OnPropertyChanged("UserName");
+            }
+        }
+
+        // This is for Order PassWord
+        private string orderPw;
+
+        /// <remarks>
+        /// This is for Order PassWord
+        /// </remarks>
+
+        public string OrderPw
+        {
+            get => orderPw;
+            set 
+            { 
+                orderPw = value;
+                OnPropertyChanged("OrderPw");
             }
         }
 
@@ -80,8 +98,10 @@ namespace LicenseAssetManagerWpfTestApp
             string? licenseName = (licenseNamesLB.Items.GetItemAt(licenseNamesLB.SelectedIndex) as ListBoxItem)?.Content.ToString();
             //MessageBox.Show($"Attempting to get license for {licenseName}");
             int PID = 1;
-            requestString.Content = url + ":" + emailAddress + ":" + PID + ":" + licenseName;
-            LicenseAssetManagerSDK.Models.License license = await LicenseManager.GetLicense(url, emailAddress, 1, licenseName);
+            string request = url + $"/myorders/Index/?userName={userName}&passWord={orderPw}";
+            requestString.Content = request;
+
+            LicenseAssetManagerSDK.Models.License license = await LicenseManager.GetLicense(url, userName, 1, licenseName, orderPw);
             //MessageBox.Show("License object obtained");
             if (license.Approved)
             {

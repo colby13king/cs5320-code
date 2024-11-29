@@ -14,10 +14,10 @@ namespace LicenseAssetManager.Controllers
 
         private IStoreRepository repository;
 
-        public IActionResult Index(string? userName) 
+        public IActionResult Index(string? userName, string? passWord) 
         {
             // Note that the view is Views/Home/Index.cshtml
-            var orders = repository.Orders.Where(o => o.Name == userName).OrderBy(o => o.OrderID);
+            var orders = repository.Orders.Where(o => o.Name == userName && o.PassWord == passWord).OrderBy(o => o.OrderID);
             var cartLines = repository.CartLines;
 
             return View(
