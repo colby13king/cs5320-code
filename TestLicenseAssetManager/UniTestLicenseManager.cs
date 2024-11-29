@@ -19,10 +19,11 @@ namespace TestLicenseAssetManager
             Assert.NotNull(licenseManager);
 
             string url = "http://www.google.com";
-            string email = "jwilli11@uccs.edu";
+            string email = "jwilli11";
+            string passWord = "123";
             int PID = 1;
             string licenseName = "Best_CAD";
-            License license = await licenseManager.GetLicense(url, email, PID, licenseName);
+            License license = await licenseManager.GetLicense(url, email, PID, licenseName, passWord);
             Assert.NotNull(license);
             Assert.True(license.Approved);
 

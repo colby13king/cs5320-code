@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LicenseAssetManagerWpfTestApp"
         mc:Ignorable="d"
-        Title="License Asset Manager Test App" Height="450" Width="800" x:Name="window">
+        Title="License Asset Manager Test App" Height="450" Width="850" x:Name="window">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -21,17 +22,19 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0">User Name</Label>
-        <Label Grid.Row="1" Grid.Column="0">Select License</Label>
-        <Button Grid.Row="2" Grid.Column="0" Click="Button_Click">Press to Request License</Button>
-        <Label Grid.Row="3" Grid.Column="0">Request String</Label>
-        <Label Grid.Row="4" Grid.Column="0">Request Result</Label>
+        <Label Grid.Row="1" Grid.Column="0">Order PassWord</Label>
+        <Label Grid.Row="2" Grid.Column="0">Select License</Label>
+        <Button Grid.Row="3" Grid.Column="0" Click="Button_Click">Press to Request License</Button>
+        <Label Grid.Row="4" Grid.Column="0">Request String</Label>
+        <Label Grid.Row="5" Grid.Column="0">Request Result</Label>
 
-        <TextBox x:Name="emailTB" Grid.Row="0" Grid.Column="1" Foreground="Red" Text="{Binding EmailAddress}"></TextBox>
-        <ListBox x:Name="licenseNamesLB" Grid.Row="1" Grid.Column="1">
+        <TextBox x:Name="userNameTB" Grid.Row="0" Grid.Column="1" Foreground="Red" Text="{Binding UserName}"></TextBox>
+        <TextBox x:Name="orderPwTB" Grid.Row="1" Grid.Column="1" Foreground="Red" Text="{Binding OrderPw}"></TextBox>
+        <ListBox x:Name="licenseNamesLB" Grid.Row="2" Grid.Column="1">
             <ListBoxItem>Best_CAD</ListBoxItem>
             <ListBoxItem>Unknown_License</ListBoxItem>
         </ListBox>
-        <Label Grid.Row="3" Grid.Column="1" x:Name="requestString">Request String</Label>
-        <Label Grid.Row="4" Grid.Column="1" x:Name="requestResult">Request Result</Label>
+        <Label Grid.Row="4" Grid.Column="1" x:Name="requestString">Request String</Label>
+        <Label Grid.Row="5" Grid.Column="1" x:Name="requestResult">Request Result</Label>
     </Grid>
 </Window>
