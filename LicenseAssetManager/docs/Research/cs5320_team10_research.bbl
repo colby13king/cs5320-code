@@ -10,6 +10,10 @@ R.~Miles and K.~Hamilton.
 \newblock {\em Learning UML 2.0}.
 \newblock O'Reilly, 2006.
 
+\bibitem{NCS}
+NCS.
+\newblock National cad standard.
+
 \bibitem{Lamport:AIA_Graphical_Standards}
 A.~I. of~Architects.
 \newblock {\em Architectural Graphic Standards, 11th Edition}.
@@ -19,6 +23,11 @@ A.~I. of~Architects.
 A.~van Lamsweerde.
 \newblock {\em Requirements Engineering}.
 \newblock Wiley, 2010.
+
+\bibitem{Lamport:SysML}
+T.~Weilkiens.
+\newblock {\em Systems Engineering with SysML and UML}.
+\newblock Morgan Kaufmann OMG Press, 2006.
 
 \bibitem{Lamport:SoftwareRequirements}
 K.~Wiegers and J.~Beatty.

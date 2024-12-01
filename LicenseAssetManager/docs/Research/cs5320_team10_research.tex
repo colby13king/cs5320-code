@@ -31,11 +31,13 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
+\linespread{1.5}
+
 \begin{document}
 
 \title{Software Architecture}
 
-\subtitle{When to use Alternative Formats for Communicating Ideas from Stakeholders to Software Developers}
+\subtitle{When to use Text and Graphical Formats for Communicating Ideas from Stakeholders to Software Developers}
 
 
 %
@@ -108,45 +110,41 @@ Documenting software in a way that avoids verbosity, ambiguity, and confusion is
 \keywords{Software, Architecture, Documentation} % NOT required for Proceedings
 
 \section{Introduction}
-
-
-
-\section{Background}
 Software architects are responsible for communicating ideas from stakeholders to software coders with the goal that the software coders accurately and completely implement those ideas into a working software product.\newline
 With an estimated software project failure rate of over 40\%, we need to investigate possible reasons for such a high percentage of failures. One such reason may be a failure to communicate effectively. Communication is required between stakeholders and requirements engineers, between requirements engineers and software architects, and finally between software architects and software coders and testers \cite{Lamport:RequirementsEngineering}. The authors will focus their investigation on communication failures between software architects and software coders and testers. This approach will assume that documents created prior to this communication phase are both complete and correct.\newline
-Software architects have several formats to chose from when it comes to creating documentation for software. We will assume that most software projects are too complex to support an all oral format using natural language to communicate the ideas, so we will assume that at least a written format using natural language is required. Other formats that are more formal and structured in nature include UML diagrams and mathematical models.
+Software architects have several formats to chose from when it comes to creating documentation for software. We will assume that most software projects are too complex to support an all oral format using natural language to communicate the ideas, so we will assume that at least a written format using natural language is required. Other formats that are more formal and structured include UML diagrams and mathematical models.
 
 \section{Related Work}
 Miles and Hamilton describe why and how to use UML (Universal Modeling Language) for documenting software. They state that because informal languages do not have exact rules they will always suffer from the problem of verbosity, confusion, ambiguity and unnecessary details, which is an extremely dangerous way to model a system. Their solution is to use a formal modeling language, such as UML \cite{Lamport:UML}.
 \newline
-They list the following situations for using UML \cite{Lamport:UML}.
+They list the following UML diagrams\cite{Lamport:UML}.
 \begin{enumerate}
 	\item Requirements using Use Case Diagrams
 	\newline
 	Use cases are the system's functional requirements and should be the first output from your modeling. "How can you begin to design a system if you don't know what it will be required to do?" \cite{Lamport:UML} Use cases specify what the system will deliver to users.
 	\newline
-	The figure below shows a sample use case diagram from our class project.
+	The figure below shows a use case diagram from our class project.
 	\newline
 	\includegraphics[scale=0.5]{UseCaseDiagrams}
 	\item System Workflows using Activity Diagrams
 	\newline
 	Activity diagrams show how the system will accomplish the requirements set out in the user case diagrams. High-level actions are linked together to represent a process that needs to occur in the system \cite{Lamport:UML}.
 	\newline
-	The figure below shows a sample activity diagram from our class project.
+	The figure below shows an activity diagram from our class project.
 	\newline
 	\includegraphics[scale=0.5]{ActivityDiagram}
 	\item A Systems Logical Structure using Class Diagrams
 	\newline
 	Class diagrams show classes and their relationships \cite{Lamport:UML}.
 	\newline
-	The figure below shows a sample class diagram from our class project.
+	The figure below shows a class diagram from our class project.
 	\newline
 	\includegraphics[scale=0.4]{ClassDiagrams}
 	\item Ordered Interactions using Sequence Diagrams
 	\newline
 	Sequence diagrams are an important member of a group known as interaction diagrams. They help accurately model how the parts that make up the system interact.  They capture the order of interactions between parts of the system, describe which interactions will be triggered and in what order those interactions will occur.
 	\newline
-	The figure below shows a sample class diagram from our class project.
+	The figure below shows a sequence diagram from our class project.
 	\newline
 	\includegraphics[scale=0.3]{SequenceDiagram}
 	\item Interaction Links using Communication Diagrams
@@ -173,10 +171,12 @@ Wiegers and Beatty discuss the importance of using both textual and visual forma
 \end{enumerate}
 Wiegers and Beatty also briefly discuss the use of visual models in agile driven projects \cite{Lamport:SoftwareRequirements}.
 
+Weilkiens introduces a toolbox that can be used for modeling complex and distributed systems called SYSMOD. This toolbox helps to alleviate some of the problems due to rising complexity of systems. There is a great need to express component systems in a way that can be easily shared between team members. A shared language is important for being able to complete the design task \cite{Lamport:SysML}.
+
 The American Institute of Architects discuss the need for standard content and graphics to be used by Construction Architects to document their projects (Appendix E). \cite{Lamport:AIA_Graphical_Standards}. Although software architecture and construction architecture are technically different fields, they share many common goals of turning stakeholder ideas into a real products.
 \newline
 The US CAD Standard (NCS) is a compilation of related documents published by several organizations for the purposes of creating a national standard for construction related CAD documents. \cite{Lamport:AIA_Graphical_Standards}.\newline
-A national design document standard provides the following advantages
+A national CAD standard provides the following advantages \cite{Lamport:AIA_Graphical_Standards}
 \begin{enumerate}
 	\item Allows information to be transfered throughout the project cycle from one professional to another.
 	\item Results in better coordination between architects and engineers
@@ -195,7 +195,7 @@ The Uniform Drawing System consist of 8 modules that help standardize the docume
 	\item Module 8 - Code Conventions
 \end{enumerate}
 
-Of particular interest is the use of a drawing set hierarchy 
+Of particular interest is the recommendation of using of a drawing set hierarchy in the NCS.  
 
 Ingeno discusses methods for documenting and reviewing software architectures \cite{Lamport:SoftwareArchitectureHandbook} In particular, he discusses
 \begin{enumerate}
@@ -206,16 +206,44 @@ Ingeno discusses methods for documenting and reviewing software architectures \c
 \end{enumerate}
 
 \section{Proposed Approach}
-The authors will review some of the literature written by leading experts on the topic of requirements documentation content and format. A table will be generated listing the different formats proposed and the pros and cons of each format.
+A table will be generated showing which format is recommended by each professional or professional association.
 
 \section{Experimental Results}
+Table 1 summarizes the opinions of various experts in the field of technical documentation.
+\begin{table}[ht]
+	\caption{Expert Recommendations for Document Formats} % title of Table
+	\centering % used for centering table
+	\begin{tabular}{c c c c} % centered columns (4 columns)
+		\hline\hline %inserts double horizontal lines
+		Expert & Text & Graphics & Both \\ [0.5ex] % inserts table
+		%heading
+		\hline % inserts single horizontal line
+		Miles and Hamilton \cite{Lamport:UML} &  &  & Yes \\ % inserting body of the table
+		Wiegers and Beatty \cite{Lamport:SoftwareRequirements} &  &  & Yes \\
+		Weilkiens \cite{Lamport:SysML} &  &  & Yes \\
+		Ingeno \cite{Lamport:SoftwareArchitectureHandbook} &  &  & Yes \\
+		Lamsweerde \cite{Lamport:RequirementsEngineering} &  &  & Yes \\
+		AIA \cite{Lamport:AIA_Graphical_Standards} &  &  & Yes \\
+		NCS \cite{NCS} &  &  & Yes \\ [1ex] % [1ex] adds vertical space
+		\hline %inserts single line
+	\end{tabular}
+	\label{table:nonlin} % is used to refer this table in the text
+\end{table}
 
 \section{Discussion}
+
 
 \section{Threats to Validity}
 
 \section{Conclusions and Future Work}
-Our conclusion is ...
+Because natural language specifications can result in incomplete and/or inaccurate application builds, natural language only specifications should be limited to the following circumstances.
+\begin{enumerate}
+	\item Throw away protypes used for evaluation purposes only.
+	\item Applications that will not evolve over time.
+	\item Applications that do not involve safety, reliability, or finances.
+	\item Applications that will not require maintenance.
+\end{enumerate}
+Due to the fact that most applications need to both evolve over time and will eventually require maintenance, our conclusion is that the majority of software specifications need to include both natural language and graphical representations to fully document their functionality. This will lead to more complete and accurate implementation of specifications by software developers. The only real exception to this is for quick and dirty prototypes that will be discarded after their usefulness has expired.
 
 \section{Acknowledgments}
 We would like to thank Dr. Kristen Walcott, Dr. Armin Moin and the Computer Science and Software Engineering Department at UCCS for helping us gain a deeper understanding of the challenges and opportunities in software architecture.
