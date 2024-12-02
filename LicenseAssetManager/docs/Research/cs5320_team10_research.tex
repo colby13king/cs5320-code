@@ -231,19 +231,21 @@ Table 1 summarizes the opinions of various experts in the field of technical doc
 \end{table}
 
 \section{Discussion}
-
+Table 1 shows that the majority of leading experts in software documentation agree that graphics, in conjunction with text, enhance the accuracy, completeness, and comprehensibility of software documents. It is encouraging to see current curriculum is CS studies including training on the use of UML diagrams in software documentation. The software industry would benefit from pushing this concept further by defining detailed drawing standards for using UML diagrams and other modeling techniques as is found in the NCS (National CAD Standard) papers and the AIA Standards for Graphics. For example, the creation of a National CAD Standard for Software Architecture (NCSSA) that mirrors the thoroughness of the NCS would be a good start. We must be aware that the creation of such a standard would take many years and require the input and buyin of many industry leaders to be successful.
 
 \section{Threats to Validity}
 
 \section{Conclusions and Future Work}
-Because natural language specifications can result in incomplete and/or inaccurate application builds, natural language only specifications should be limited to the following circumstances.
+Because natural language specifications can result in incomplete and/or inaccurate application builds, natural language only specifications should be limited to very few circumstances. Due to the fact that most applications need to both evolve over time and will eventually require maintenance, our conclusion is that the majority of software specifications need to include both natural language and graphical representations to fully document their functionality. This will lead to more complete and accurate implementation of specifications by software developers.
+\newline
+
+\newline
+There are several opportunities for future work regarding software documentation. Here is a list of a few that we thought of.
 \begin{enumerate}
-	\item Throw away protypes used for evaluation purposes only.
-	\item Applications that will not evolve over time.
-	\item Applications that do not involve safety, reliability, or finances.
-	\item Applications that will not require maintenance.
+	\item Perform controlled studies were one group of software developers is given documents with text only and another group is given the same documents but are augmented with diagrams and graphics.
+	\item Research CAD standards and determine how they may be applicable to software development.
+	\item Research software project failures and determine which percentage of those projects used documentation that included detailed diagrams. 
 \end{enumerate}
-Due to the fact that most applications need to both evolve over time and will eventually require maintenance, our conclusion is that the majority of software specifications need to include both natural language and graphical representations to fully document their functionality. This will lead to more complete and accurate implementation of specifications by software developers. The only real exception to this is for quick and dirty prototypes that will be discarded after their usefulness has expired.
 
 \section{Acknowledgments}
 We would like to thank Dr. Kristen Walcott, Dr. Armin Moin and the Computer Science and Software Engineering Department at UCCS for helping us gain a deeper understanding of the challenges and opportunities in software architecture.
