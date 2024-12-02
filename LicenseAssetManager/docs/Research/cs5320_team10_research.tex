@@ -33,6 +33,8 @@
 
 \linespread{1.5}
 
+\usepackage{hyperref}
+
 \begin{document}
 
 \title{Software Architecture}
@@ -119,46 +121,59 @@ Miles and Hamilton describe why and how to use UML (Universal Modeling Language)
 \newline
 They list the following UML diagrams\cite{Lamport:UML}.
 \begin{enumerate}
-	\item Requirements using Use Case Diagrams
+	\item Requirements using \textbf{Use Case Diagrams}
 	\newline
 	Use cases are the system's functional requirements and should be the first output from your modeling. "How can you begin to design a system if you don't know what it will be required to do?" \cite{Lamport:UML} Use cases specify what the system will deliver to users.
 	\newline
 	The figure below shows a use case diagram from our class project.
 	\newline
 	\includegraphics[scale=0.5]{UseCaseDiagrams}
-	\item System Workflows using Activity Diagrams
+	\item System Workflows using \textbf{Activity Diagrams}
 	\newline
 	Activity diagrams show how the system will accomplish the requirements set out in the user case diagrams. High-level actions are linked together to represent a process that needs to occur in the system \cite{Lamport:UML}.
 	\newline
 	The figure below shows an activity diagram from our class project.
 	\newline
 	\includegraphics[scale=0.5]{ActivityDiagram}
-	\item A Systems Logical Structure using Class Diagrams
+	\item A Systems Logical Structure using \textbf{Class Diagrams}
 	\newline
 	Class diagrams show classes and their relationships \cite{Lamport:UML}.
 	\newline
 	The figure below shows a class diagram from our class project.
 	\newline
 	\includegraphics[scale=0.4]{ClassDiagrams}
-	\item Ordered Interactions using Sequence Diagrams
+	\item Ordered Interactions using \textbf{Sequence Diagrams}
 	\newline
-	Sequence diagrams are an important member of a group known as interaction diagrams. They help accurately model how the parts that make up the system interact.  They capture the order of interactions between parts of the system, describe which interactions will be triggered and in what order those interactions will occur.
+	Sequence diagrams are an important member of a group known as interaction diagrams. They help accurately model how the parts that make up the system interact.  They capture the order of interactions between parts of the system, describe which interactions will be triggered and in what order those interactions will occur \cite{Lamport:UML}.
 	\newline
 	The figure below shows a sequence diagram from our class project.
 	\newline
 	\includegraphics[scale=0.3]{SequenceDiagram}
-	\item Interaction Links using Communication Diagrams
-	\item Interaction Timing using Timing Diagrams
-	\item Interaction Picture using Interaction Overview Diagrams
-	\item Internal Class Structure using Composite Structures
-	\item System Parts using Component Diagrams
+	\item Interaction Links using \textbf{Communication Diagrams}
+	\newline
+	Communication Diagrams are also a member of the group known as interaction diagrams. They focus on the links between participants and are good at showing which links are needed to pass messages. They also show the links between participants that are required for events that make up the interaction \cite{Lamport:UML}.
+	\item Interaction Timing using \textbf{Timing Diagrams} 
+	\newline
+	Timing Diagrams are all about timing to model detailed timing information. These kinds of diagrams are mostly associated with real time and embedded systems, but may also be applied to other types of systems. Each event has the following information associated with it: when the event was invoked, how long it takes for another participant to receive the event, and how long the receiver will be in that particular state \cite{Lamport:UML}.
+	\item Interaction Picture using \textbf{Interaction Overview Diagrams}
+	\newline
+	Interaction Overview Diagrams combine sequence diagrams, communication diagrams, and timing diagrams to show the higher-level picture. They result in having a better feel for what you are doing and the context in which you are doing it. Each part of an interaction overview is a complete interaction in itself. This diagram glues together the components in a way that makes the most sense to show how things work together \cite{Lamport:UML}.
+	\item Internal Class Structure using \textbf{Composite Structures}
+	\newline
+	Composite Structures are part of the logical view of your system. They come in handy when class or sequence diagrams don't quite work. These diagrams are relatively advanced in nature are are suited for situations such as internal structures which show the parts contained by a class, ports, and collaborations which show design patterns and how objects cooperate to meet a requirement \cite{Lamport:UML}.
+	\item System Parts using \textbf{Component Diagrams}
+	
+	
 	\item Organize Your Model using Packages
 	\item Object State using State Machine Diagrams
 	\item The Deployed System using Deployment Diagrams
 \end{enumerate}
-Wiegers and Beatty discuss the importance of using both textual and visual formats to capture the full intentions of the intended system. Their book describes the following visual requirements models \cite{Lamport:SoftwareRequirements}.
+A picture is worth 1024 words! The title of chapter 12 in Software Requirements. Wiegers and Beatty discuss the importance of using both textual and visual representations at different levels of abstraction to capture the full intentions of the intended system \cite{Lamport:SoftwareRequirements}. "Comparing the different representations of requirements reveals inconsistencies, ambiguities, assumptions, and omissions that would otherwise be difficult to spot" \cite{Lamport:SoftwareRequirements}. The authors stress that visual representations should augment and not replace natural language specifications \cite{Lamport:SoftwareRequirements}.
+
+Their book describes the following visual requirements models \cite{Lamport:SoftwareRequirements}.
 \begin{enumerate}
 	\item Data flow diagrams (DFDs)
+	
 	\item Process flow diagrams 
 	\item State-transition diagrams and state tables
 	\item Dialog maps
@@ -205,6 +220,9 @@ Ingeno discusses methods for documenting and reviewing software architectures \c
 	\item Reviewing software architecture documents
 \end{enumerate}
 
+Other work that is somewhat related to Software Architecture documentation can be found by searching for articles related to Construction Architecture documentation. By replacing the verb construction with the verb software development, replacing the noun building with the noun application and replacing the noun material(s) with class or instance in these articles, one will see the striking resemblence between Software Architecture and Construction Architecture. One such article I found interesting can be found here
+\href{https://pinnacleinfotech.com/importance-of-detailed-architectural-drawings-in-modern-construction/}{The Importance of Detailed Architectural Drawings in Modern Construction, Pinnacle Infotech, 2024}
+
 \section{Proposed Approach}
 A table will be generated showing which format is recommended by each professional or professional association.
 
@@ -240,9 +258,9 @@ Because natural language specifications can result in incomplete and/or inaccura
 \newline
 There are several opportunities for future work regarding software documentation. Here is a list of a few that we thought of.
 \begin{enumerate}
-	\item Perform controlled studies were one group of software developers is given documents with text only and another group is given the same documents but are augmented with diagrams and graphics.
-	\item Research CAD standards and determine how they may be applicable to software development.
-	\item Research software project failures and determine which percentage of those projects used documentation that included detailed diagrams. 
+	\item Perform controlled studies were one group of software developers is given documents with text only and another group is given the same documents but are augmented with diagrams and graphics. Compare the results to see if there is a significant difference.
+	\item Examine CAD standards and determine how they may be applicable to software development documentation.
+	\item Examine software project failures and determine which percentage of those projects used documentation that included detailed diagrams. 
 \end{enumerate}
 
 \section{Acknowledgments}
