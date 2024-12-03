@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{Lamport:VisualExplanations}
+Bobek and Tversky.
+\newblock {Creating visual explanations improves learning. Cogn Res Princ
+  Implic}.
+\newblock {\em National Library of Medicine}, 2016.
+
 \bibitem{Lamport:SoftwareArchitectureHandbook}
 J.~Ingeno.
 \newblock {\em Software Architect's Handbook}.
@@ -10,7 +16,7 @@ R.~Miles and K.~Hamilton.
 \newblock {\em Learning UML 2.0}.
 \newblock O'Reilly, 2006.
 
-\bibitem{NCS}
+\bibitem{Lamport:NCS}
 NCS.
 \newblock National cad standard.
 

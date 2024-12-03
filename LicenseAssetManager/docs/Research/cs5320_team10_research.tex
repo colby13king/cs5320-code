@@ -164,9 +164,19 @@ They list the following UML diagrams\cite{Lamport:UML}.
 	\item System Parts using \textbf{Component Diagrams}
 	\newline
 	Component Diagrams are part of the Development View which show how your system is organized into modules and components. This helps to manage layers within your systems architecture. Component Diagrams also help you manage complexities and dependencies between the parts. A component is an encapsulated, reusable, and replaceable part of your system which acts like a building block which can be combined into even larger component building blocks \cite{Lamport:UML}.
-	\item Organize Your Model using Packages
-	\item Object State using State Machine Diagrams
-	\item The Deployed System using Deployment Diagrams
+	\item Organize Your Model using \textbf{Packages}
+	\newline
+	Packages are part of the Development View and are used to group like UML elements together. In the case of grouping classes, namespaces are used. Namespaces are typically folders that contain like objects. For example, a folder named Models may be created to contain all classes that are model object classes. Packages help keep things organized. Also, dependencies between packages can be shown, which is an important fact to know \cite{Lamport:UML}.
+	\item Object State using \textbf{State Machine Diagrams}
+	\newline
+	State Machine Diagrams are part of the Logical View and are used to show the state of objects and the events that trigger the objects to change state. A state diagram consists of states, transitions, and events. A transition represents a change of state or how to get from one state to another. The event is was causes the transition. A state becomes active when it is entered and inactive when it is exited. State diagrams are used frequently in real-time, mission critical applications, dedicated devices, and in games \cite{Lamport:UML}.
+	\newline
+	The figure below shows a state diagram from \cite{Lamport:UML}.
+	\newline
+	\includegraphics[scale=0.3]{StateDiagrams}
+	\item The Deployed System using \textbf{Deployment Diagrams}
+	\newline
+	Deployment Diagrams are part of the Physical View and show both the hardware and software components of the system and how they are deployed. This view is especially helpful to stakeholders to show them how the final delivered system will look. In these diagrams, hardware is referred to as a node and software is referred to as an artifact. These diagrams evolve over the lifetime of the project and contain enough information to support the systems needs \cite{Lamport:UML}.
 \end{enumerate}
 A picture is worth 1024 words! The title of chapter 12 in Software Requirements. Wiegers and Beatty discuss the importance of using both textual and visual representations at different levels of abstraction to capture the full intentions of the intended system \cite{Lamport:SoftwareRequirements}. "Comparing the different representations of requirements reveals inconsistencies, ambiguities, assumptions, and omissions that would otherwise be difficult to spot" \cite{Lamport:SoftwareRequirements}. The authors stress that visual representations should augment and not replace natural language specifications \cite{Lamport:SoftwareRequirements}.
 
@@ -222,6 +232,9 @@ Ingeno discusses methods for documenting and reviewing software architectures \c
 
 Other work that is somewhat related to Software Architecture documentation can be found by searching for articles related to Construction Architecture documentation. By replacing the verb construction with the verb software development, replacing the noun building with the noun application and replacing the noun material(s) with class or instance in these articles, one will see the striking resemblence between Software Architecture and Construction Architecture. One such article I found interesting can be found here
 \href{https://pinnacleinfotech.com/importance-of-detailed-architectural-drawings-in-modern-construction/}{The Importance of Detailed Architectural Drawings in Modern Construction, Pinnacle Infotech, 2024}
+\newline
+\newline
+Bobek and Tversky presented a paper on how learning can be improved by using visuals \cite{Lamport:VisualExplanations}. They state that "creating visual explanations is superior to creating verbal ones. There are several notable differences between visual and verbal explanations; visual explanations map thought more directly than words and provide checks for completeness and coherence as well as a platform for inference, notably from structure to process." \cite{Lamport:VisualExplanations}
 
 \section{Proposed Approach}
 A table will be generated showing which format is recommended by each professional or professional association.
@@ -242,7 +255,7 @@ Table 1 summarizes the opinions of various experts in the field of technical doc
 		Ingeno \cite{Lamport:SoftwareArchitectureHandbook} &  &  & Yes \\
 		Lamsweerde \cite{Lamport:RequirementsEngineering} &  &  & Yes \\
 		AIA \cite{Lamport:AIA_Graphical_Standards} &  &  & Yes \\
-		NCS \cite{NCS} &  &  & Yes \\ [1ex] % [1ex] adds vertical space
+		NCS \cite{Lamport:NCS} &  &  & Yes \\ [1ex] % [1ex] adds vertical space
 		\hline %inserts single line
 	\end{tabular}
 	\label{table:nonlin} % is used to refer this table in the text
@@ -250,8 +263,6 @@ Table 1 summarizes the opinions of various experts in the field of technical doc
 
 \section{Discussion}
 Table 1 shows that the majority of leading experts in software documentation agree that graphics, in conjunction with text, enhance the accuracy, completeness, and comprehensibility of software documents. It is encouraging to see current curriculum is CS studies including training on the use of UML diagrams in software documentation. The software industry would benefit from pushing this concept further by defining detailed drawing standards for using UML diagrams and other modeling techniques as is found in the NCS (National CAD Standard) papers and the AIA Standards for Graphics. For example, the creation of a National CAD Standard for Software Architecture (NCSSA) that mirrors the thoroughness of the NCS would be a good start. We must be aware that the creation of such a standard would take many years and require the input and buyin of many industry leaders to be successful.
-
-\section{Threats to Validity}
 
 \section{Conclusions and Future Work}
 Because natural language specifications can result in incomplete and/or inaccurate application builds, natural language only specifications should be limited to very few circumstances. Due to the fact that most applications need to both evolve over time and will eventually require maintenance, our conclusion is that the majority of software specifications need to include both natural language and graphical representations to fully document their functionality. This will lead to more complete and accurate implementation of specifications by software developers.
@@ -265,32 +276,6 @@ There are several opportunities for future work regarding software documentation
 
 \section{Acknowledgments}
 We would like to thank Dr. Kristen Walcott, Dr. Armin Moin and the Computer Science and Software Engineering Department at UCCS for helping us gain a deeper understanding of the challenges and opportunities in software architecture.
-
-\section{Notes and Brainstorming - Delete before submitting final paper}
-\begin{enumerate}
-	\item Understanding Research Problems
-	\begin{enumerate}
-		\item Topic: We are evaluating the usefulness of presenting ideas in different formats 
-		\item Question: because we want to find out if certain formats are more useful than others in communicating ideas from stakeholders to software developers
-		\item Significance: so that we can help others choose a document format that will result in successful communication of ideas from stakeholders to software developers. 
-	\end{enumerate}
-	\item Levels of Idea Formats from Abstract to Concrete
-	\begin{enumerate}
-		\item Mental
-		\item Natural Language
-		\begin{enumerate}
-			\item Oral
-			\item Written
-		\end{enumerate}
-			
-		\item Formal Languages
-		\begin{enumerate}
-			\item Mathematical
-			\item Models (UML)
-		\end{enumerate}
-		\item Source Code
-	\end{enumerate}
-\end{enumerate}
 
  
 %
