@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="LicenseAssetManager.Models.Product">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="12.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAQAgAAAAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Models\Product.cs</FileName>
@@ -10,20 +10,20 @@
   <Class Name="LicenseAssetManager.Models.EFStoreRepository">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>IAECAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Models\EFStoreRepository.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="LicenseAssetManager.Models.StoreDbContext">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Models\StoreDbContext.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LicenseAssetManager.Models.SeedData">
-    <Position X="0.75" Y="3.5" Width="1.5" />
+    <Position X="12.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Models\SeedData.cs</FileName>
@@ -36,11 +36,78 @@
       <FileName>Models\ErrorViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="LicenseAssetManager.Models.Cart">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAgAAAAAACAAAAAABEAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.Models.CartLine">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAgAAAAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.Models.Order">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.Models.SessionCart">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEQAAAAAAAEAAgAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\SessionCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.Models.EFOrderRepository">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\EFOrderRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LicenseAssetManager.ViewModels.PagingInfo">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>ViewModels\PagingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.ViewModels.OrdersListViewModel">
+    <Position X="17.5" Y="3.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\OrdersListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LicenseAssetManager.ViewModels.ProductsListViewModel">
+    <Position X="11.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\ProductsListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="LicenseAssetManager.Models.IStoreRepository">
     <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>IAEAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Models\IStoreRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LicenseAssetManager.Models.IOrderRepository">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\IOrderRepository.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
