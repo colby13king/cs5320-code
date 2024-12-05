@@ -31,7 +31,8 @@
         <TextBox x:Name="userNameTB" Grid.Row="0" Grid.Column="1" Foreground="Red" Text="{Binding UserName}"></TextBox>
         <TextBox x:Name="orderPwTB" Grid.Row="1" Grid.Column="1" Foreground="Red" Text="{Binding OrderPw}"></TextBox>
         <ListBox x:Name="licenseNamesLB" Grid.Row="2" Grid.Column="1">
-            <ListBoxItem>Best_CAD</ListBoxItem>
+            <ListBoxItem>BestCAD</ListBoxItem>
+            <ListBoxItem>BestCAD_Layout</ListBoxItem>
             <ListBoxItem>Unknown_License</ListBoxItem>
         </ListBox>
         <Label Grid.Row="4" Grid.Column="1" x:Name="requestString">Request String</Label>
