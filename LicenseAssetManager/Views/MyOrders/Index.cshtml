@@ -5,12 +5,9 @@
 @model LicenseAssetManager.ViewModels.OrdersListViewModel
 
 <div>
-    @foreach (var order in Model.Orders ?? Enumerable.Empty<Order>())
+    @if(Model.Product != null)
     {
-        <h4>OrderID = @order.OrderID</h4> <br/>
-        @foreach (var item in order.Lines)
-        {
-           <h4>CartLineID @item.CartLineID</h4>
-        }
+        <h4>Product = @Model.Product.Name</h4> <br/>
     }
+    
 </div>

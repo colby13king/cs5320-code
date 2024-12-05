@@ -36,7 +36,7 @@ namespace LicenseAssetManagerSDK.Controllers
         public async Task<License> GetLicense(string _url, string _userName, int _PID, string _licenseName, string passWord)
 		{
 			license = new License(_licenseName, _url, _PID, _userName);
-            var requestLicense = await RequestLicense(_url, _userName, passWord);
+            var requestLicense = await RequestLicense(_url, _userName, passWord, _licenseName);
 
             if(requestLicense == true)
             {
@@ -46,16 +46,16 @@ namespace LicenseAssetManagerSDK.Controllers
             return license;
 		}
 
-        async Task<bool> RequestLicense(string uri, string userName, string passWord)
+        async Task<bool> RequestLicense(string uri, string userName, string passWord, string licenseName)
         {
             bool result = false;
 
             // Call asynchronous network methods in a try/catch block to handle exceptions.
             try
             {
-                string request = uri + $"/myorders/Index/?userName={userName}&passWord={passWord}";
+                string request = uri + $"/myorders/Index/?userName={userName}&passWord={passWord}&productName={licenseName}";
                 var clientResult = await client.GetStringAsync(request);
-                if(clientResult.Contains("OrderID"))
+                if(clientResult.Contains("Product = " + licenseName))
                 {
                     result = true ;
                 }

@@ -98,7 +98,7 @@ namespace LicenseAssetManagerWpfTestApp
             string? licenseName = (licenseNamesLB.Items.GetItemAt(licenseNamesLB.SelectedIndex) as ListBoxItem)?.Content.ToString();
             //MessageBox.Show($"Attempting to get license for {licenseName}");
             int PID = 1;
-            string request = url + $"/myorders/Index/?userName={userName}&passWord={orderPw}";
+            string request = url + $"/myorders/Index/?userName={userName}&passWord={orderPw}&productName={licenseName}";
             requestString.Content = request;
 
             LicenseAssetManagerSDK.Models.License license = await LicenseManager.GetLicense(url, userName, 1, licenseName, orderPw);
