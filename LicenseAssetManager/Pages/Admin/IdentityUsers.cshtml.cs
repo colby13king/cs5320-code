@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace LicenseAssetManager.Pages.Admin
 {
-    public class IndexModel : PageModel
+    public class IdentityUsersModel : PageModel
     {
         public void OnGet()
         {

@@ -33,7 +33,10 @@ builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
 builder.Services.AddScoped<IOrderRepository, EFOrderRepository>();
 
 // 8.2.1 Configure Razor Pages
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeFolder("/admin");
+});
 
 // 8.2.4 Enable Sessions
 // sets up the data in-memory data store
@@ -47,6 +50,10 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 // 10.1 Prep Blazor Server
 builder.Services.AddServerSideBlazor();
+
+// 11.1.4 Configuring the application for security
+builder.Services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings:IdentityConnection"]));
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -79,6 +86,10 @@ app.UseStaticFiles();
 // 8.2.4 Enable Sessions
 // allows the session system to automatically associate request with sessions when they arrive from the client
 app.UseSession();
+
+// 11.1.4 Configuring the app for secutiry
+app.UseAuthentication();
+app.UseAuthorization();
 
 // 8.1.2
 // Create URLs that are more appealing by creating a scheme that follows the pattern of composable URLs (makes sense to the user)
@@ -117,7 +128,7 @@ app.MapRazorPages();
 
 // 10.1 Prep Blazor Server
 app.MapBlazorHub();
-app.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
+app.MapFallbackToPage("/admin/{*catchall}", "/admin/index");
 
 app.MapRazorComponents<AdminBlazor>().AddInteractiveServerRenderMode();
 
@@ -125,6 +136,9 @@ app.UseAntiforgery();
 
 // 7.2.7
 SeedData.EnsurePopulated(app);
+
+// 11.1.6 defining the seed data for admin
+IdentitySeedData.EnsurePopulated(app);
 
 // 7.1.5
 app.Run();
