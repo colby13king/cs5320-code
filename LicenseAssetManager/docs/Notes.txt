@@ -8,3 +8,8 @@
                      dbo.Products
                         Right click
                            View Data
+To reset the database
+Developer PowerShell
+cd LicenseAssetManager
+dotnet ef database drop --force --context StoreDbContext
+dotnet ef database drop --force --context AppIdentityDbContext
