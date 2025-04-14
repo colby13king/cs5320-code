@@ -130,7 +130,7 @@ app.MapRazorPages();
 app.MapBlazorHub();
 app.MapFallbackToPage("/admin/{*catchall}", "/admin/index");
 
-app.MapRazorComponents<AdminBlazor>().AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
 app.UseAntiforgery();
 
