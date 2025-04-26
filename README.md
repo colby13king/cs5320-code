@@ -44,6 +44,10 @@ Click on the "http" button in Visual Studio.
 A command terminal will open showing the commands that are being run.
 Your browser should open to the home page.
 
+How to run test cases.
+In Visual Studio, open the Test Explorer window.
+Select "Run all test in view."
+
 Maintenance Task For CS5340
 The maintenance task completed during the S2025 semester were mostly perfective in nature. 
 This included generating UML class diagrams for the entire main project and adding more unit test cases to the TestLicenseAssetManager project.
