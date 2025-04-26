@@ -37,8 +37,8 @@ https://www.manning.com/ebook-license
 Source Code Supplementary Material
 Any source code files provided as a supplement to the book are freely available to the public for download. Reuse of the code is permitted, in whole or in part, including the creation of derivative works, provided that you acknowledge that you are using it and identify the source: Pro ASP.NET Core 7 10th ed., Adam Freeman, Manning Publishing, 2023.
 
-How to run the main application
-Open the Solution is Visual Studio
+How to run the main application.
+Open the Solution in Visual Studio.
 Make sure the LicenseAssetManager is set to the starting project.
 Click on the "http" button in Visual Studio.
 A command terminal will open showing the commands that are being run.
@@ -47,7 +47,7 @@ Your browser should open to the home page.
 Maintenance Task For CS5340
 The maintenance task completed during the S2025 semester were mostly perfective in nature. 
 This included generating UML class diagrams for the entire main project and adding more unit test cases to the TestLicenseAssetManager project.
-The UML Class diagrams can be found in the file "C:\Users\johnl\Documents\Visual Studio 2022\Solutions\LicenseAssetManager\LicenseAssetManager\docs\Research\EA\EA.qea"
+The UML Class diagrams can be found in the file ".\LicenseAssetManager\LicenseAssetManager\docs\Research\EA\EA.qea"
 This file can only be opened using the Enterprise Archtitect tool, which was used to generate the UML class diagrams.
 To download a free 30 day trial version of Enterprise Architect, go to https://sparxsystems.com/
 The current student/instructor cost is $123 for a fixed license and $160 for a floating license.
